@@ -1,0 +1,24 @@
+{
+    "name": "quangthinh/yii2-adminlte",
+    "description": "Yii2 AdminLTE Theme",
+    "type": "library",
+    "keywords": ["yii2","extension"],
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Quang Thịnh",
+            "email": "quangthinh.dico@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": ">=2.0.5",
+        "almasaeed2010/adminlte": "^2.3",
+        "yiisoft/yii2-bootstrap": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "quangthinh\\yii\\adminlte\\": ""
+        }
+    }
+}
