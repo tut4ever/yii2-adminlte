@@ -11,6 +11,12 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
+/**
+ * Class Menu
+ * Left sidebar
+ *
+ * @package quangthinh\yii\adminlte\widgets
+ */
 class Menu extends \yii\widgets\Menu
 {
     public function init()
