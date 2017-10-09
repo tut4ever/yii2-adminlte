@@ -11,7 +11,7 @@ class AssetBundle extends \yii\web\AssetBundle
         'css/AdminLTE.css',
     ];
     public $js = [
-        'js/app.js',
+        'js/adminlte.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',
