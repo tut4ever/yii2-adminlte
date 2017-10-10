@@ -5,6 +5,7 @@
  * Date: 1/3/2016
  * Time: 10:25 PM
  */
+
 namespace quangthinh\yii\adminlte\widgets;
 
 use Yii;
@@ -22,7 +23,8 @@ class Menu extends \yii\widgets\Menu
     public function init()
     {
         parent::init();
-        $this->options['class'] = 'sidebar-menu';
+        $this->options['class'] = 'sidebar-menu tree';
+        $this->options['data-widget'] = 'tree';
         $this->submenuTemplate = "\n<ul class=\"treeview-menu\">\n{items}\n</ul>\n";
         $this->activateParents = true;
     }
@@ -49,6 +51,15 @@ class Menu extends \yii\widgets\Menu
     {
         $n = count($items);
         $lines = [];
+
+        // weight
+        usort($items, function ($a, $b) {
+            $priority_a = isset($a['priority']) ? $a['priority'] : 10;
+            $priority_b = isset($b['priority']) ? $b['priority'] : 10;
+
+            return $priority_a == $priority_b ? 0 : ($priority_a > $priority_b ? 1 : -1);
+        });
+
         foreach ($items as $i => $item) {
             $options = array_merge($this->itemOptions, ArrayHelper::getValue($item, 'options', []));
             $tag = ArrayHelper::remove($options, 'tag', 'li');
