@@ -25,7 +25,7 @@ class Menu extends \yii\widgets\Menu
         parent::init();
         $this->options['class'] = 'sidebar-menu tree';
         $this->options['data-widget'] = 'tree';
-        $this->submenuTemplate = "\n<ul class=\"treeview-menu\">\n{items}\n</ul>\n";
+        $this->submenuTemplate = "\n<ul class=\"treeview-menu tree\">\n{items}\n</ul>\n";
         $this->activateParents = true;
     }
 
