@@ -6,7 +6,7 @@
  * Time: 4:10 PM
  */
 
-namespace quangthinh\yii\adminlte;
+namespace quangthinh\yii\adminlte\widgets;
 
 use Yii;
 use yii\helpers\Html;
@@ -36,7 +36,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                 $title = Yii::t('yii', ucfirst($name));
                 $options = array_merge([
                     'title' => $title,
-                    'class' => 'btn btn-xs btn-' . $this->buttonClass[$name],
+                    'class' => 'btn btn-flat btn-xs btn-' . $this->buttonClass[$name],
                     'aria-label' => $title,
                     'data-pjax' => '0',
                 ], $additionalOptions, $this->buttonOptions);
