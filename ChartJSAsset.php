@@ -11,7 +11,7 @@ namespace quangthinh\yii\adminlte;
 
 class ChartJSAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/almasaeed2010/adminlte/plugins/chartjs';
+    public $sourcePath = '@vendor/almasaeed2010/adminlte/bower_components/chart.js';
     public $js = [
         'Chart.min.js',
     ];
